@@ -54,6 +54,42 @@
                     </GroupBox>
                 </Grid>
             </TabItem>
+            <TabItem Header=" Task 2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <GroupBox Header="Menu">
+                        <Grid Background="DarkGray">
+                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+
+
+                            <Button Command="{Binding AddTask2}" Content="Input File For Read"/>
+                            <Button Grid.Row="1" Command="{Binding ReadTask2}" Content="Start Read"/>
+                            <Button Grid.Row="2" Command="{Binding ShowTask2}" Content="Full Info"/>
+
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Paths" Grid.Column="1">
+                        <ListBox ItemsSource="{Binding PathToFiles}"/>
+                    </GroupBox>
+                    <GroupBox Header="Reads" Grid.Column="2">
+                        <ListBox ItemsSource="{Binding Reads}" SelectedItem="{Binding ReadsSelected}"/>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
         </TabControl>
 
 

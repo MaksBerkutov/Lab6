@@ -52,8 +52,13 @@ namespace Lab6.Module.ViewModel
         public MainWindowViewModel()
         {
             _Nums = new ObservableCollection<int>();
+            _pathToFiles = new ObservableCollection<string>();
+            _Reads = new ObservableCollection<Logic.Task2.Task_EventArgs>();
             StartTask1 = new Base.Command(StartTask1Handler, CanStartTask1);
             InputTask1 = new Base.Command(InputTask1Handler, CanInputTask1);
+            AddTask2 = new Base.Command(AddTask2Handler);
+            ReadTask2 = new Base.Command(ReadTask2Handler, CanReadTask2);
+            ShowTask2 = new Base.Command(ShowTask2Handler, CanShowTask2);
         }
 
         public ObservableCollection<int> AllNum
